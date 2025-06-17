@@ -10,7 +10,9 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/meals")
-@CrossOrigin(origins = "*") // Allow frontend access (e.g., React on different port)
+@CrossOrigin(origins = {
+        "https://simplemealplanner.netlify.app", "https://localhost:5173"
+}) // Allow frontend access (e.g., React on different port)
 public class MealController {
 
     @Autowired
